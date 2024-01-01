@@ -5,7 +5,7 @@ import java.util.Scanner;
  * 알람시계
  * 2024.01.01
  */
-class Main {
+class baekjoon2884 {
     public static void baekjoon2884(String[] args) {
         // 1. 입력값 받기
         Scanner sc = new Scanner(System.in);
@@ -41,7 +41,7 @@ class Main {
             }
         }
         // 2-2. 예외처리
-        else
-            return;
+        else {
+        }
     }
 }
