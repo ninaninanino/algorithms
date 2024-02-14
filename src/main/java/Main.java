@@ -36,11 +36,11 @@ public class Main {
         for (int i = 0 ; i < m ; i++) {
             String[] inputs = br.readLine().split(" ");
             // 위치
-            int ii = Integer.parseInt(inputs[0]);
-            int jj = Integer.parseInt(inputs[1]);
+            int i_loc = Integer.parseInt(inputs[0]);
+            int j_loc = Integer.parseInt(inputs[1]);
             //밸류
-            int i_val = Integer.parseInt(output[ii]);
-            int j_val = Integer.parseInt(output[jj]);
+            int i_val = Integer.parseInt(output[i_loc]);
+            int j_val = Integer.parseInt(output[j_loc]);
 
             if (1 <= i_val && i_val <= j_val && j_val <= n) {
 
@@ -50,10 +50,15 @@ public class Main {
 
             }
         }
-       [1 2 3 4 5]
-        2 1 - - -
-        - - 4 - -2 - 3 1 4 2 5
+             [1 2 3 4 5]
+        (1,2) 2 1 - - -
+        (3,4) - - 4 3 -
+        (1,4) 3 - - 2 -
+        (2,2) - 1 - - -
+        (결과) 3 1 4 2 5
 
+
+        bw.write(output[])
         br.close();
         bw.flush();
         bw.close();
