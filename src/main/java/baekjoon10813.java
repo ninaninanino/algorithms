@@ -103,3 +103,59 @@ public class baekjoon10813 {
 //        bw.close();
     }
 }
+
+/* GPT4가 제시해준 방향:
+import lombok.Getter;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+import java.util.StringTokenizer;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int N = Integer.parseInt(st.nextToken());
+        int M = Integer.parseInt(st.nextToken());
+
+        Basket[] baskets = new Basket[N];
+        for (int i = 0; i < N; i++) {
+            baskets[i] = new Basket(i + 1);
+        }
+
+        for (int i = 0; i < M; i++) {
+            st = new StringTokenizer(br.readLine());
+            int firstBasketIndex = Integer.parseInt(st.nextToken()) - 1;
+            int secondBasketIndex = Integer.parseInt(st.nextToken()) - 1;
+
+            Basket.exchangeBalls(baskets[firstBasketIndex], baskets[secondBasketIndex]);
+        }
+
+        for (Basket basket : baskets) {
+            System.out.print(basket.getBallNumber() + " ");
+        }
+    }
+}
+
+@Getter
+class Basket {
+    private int ballNumber;
+
+    public Basket(int ballNumber) {
+        this.ballNumber = ballNumber;
+    }
+
+    public void setBallNumber(int ballNumber) {
+        this.ballNumber = ballNumber;
+    }
+
+    public static void exchangeBalls(Basket firstBasket, Basket secondBasket) {
+        int temp = firstBasket.getBallNumber();
+        firstBasket.setBallNumber(secondBasket.getBallNumber());
+        secondBasket.setBallNumber(temp);
+    }
+}
+
+ */
